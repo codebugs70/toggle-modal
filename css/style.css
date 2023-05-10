@@ -1,0 +1,114 @@
+/* =================================================== */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.open-modal {
+  padding: 15px 30px;
+  background-color: #6a5af9;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  text-transform: capitalize;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal.active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.2s linear;
+}
+.modal-close {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100rem;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #eee;
+}
+.modal-close:hover {
+  background-color: #6a5af9;
+  color: white;
+}
+.modal-close * {
+  pointer-events: none;
+}
+.modal-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  padding: 30px;
+}
+.modal-content img {
+  user-select: none;
+  margin: 0 auto;
+  width: 300px;
+  margin-bottom: 30px;
+}
+.modal-content p {
+  text-align: center;
+}
+.modal-meta {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.modal-meta button {
+  cursor: pointer;
+  padding: 15px 30px;
+  width: 100px;
+  text-align: center;
+  font-weight: 500;
+  text-transform: capitalize;
+  border-radius: 6px;
+}
+.modal-meta button:hover {
+  opacity: 0.8;
+}
+.modal-meta .view-btn {
+  background-color: #eee;
+}
+.modal-meta .guide-btn {
+  color: white;
+  background-color: #6a5af9;
+}
+
+/*# sourceMappingURL=style.css.map */
